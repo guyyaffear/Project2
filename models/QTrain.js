@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var QTrain = sequelize.define("TrainTB", {
-    stops: DataTypes.STRING,
+  var QTrain = sequelize.define("QTrain", {
+    stops: DataTypes.STRING
   });
   return QTrain;
 };
