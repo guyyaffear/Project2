@@ -4,7 +4,7 @@
         <head>
             <meta charset="utf-8">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-            <title>Home Page</title>
+            <title>SWay Home Page</title>
           </head>
     </head>
 
@@ -13,14 +13,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-8 offset-2">
-                        <h2>SWay Home</h2>
+                        <h2 style="text-align: center;">SWay Home</h2>
+                        <button type="button" id="index-button" class="btn btn-primary float-right"><a href="index.html"></a>Index</button>
+                        <button type="button" id="login-button" class="btn btn-primary float-right"><a href=""></a>Login</button>
                         <form class="clearfix mb-4" action="POST">
                             <div class="form-group">
-                                <label for="example-text">Enter Train name</label>
+                                <label for="example-text">Enter Train name:</label>
                                 <input type="text" id="name-text" class="form-control" aria-describedby="name-text" placeholder="Enter Train name">
                             </div>
                             <div class="form-group">
-                                <label for="train-description">Train stop description</label>
+                                <label for="train-description">Train stop description:</label>
                                 <textarea class="form-control" id="train-description" aria-describedby="train-description" placeholder="Enter Train description"></textarea>
                             </div>
                             <button id="submit" class="btn btn-primary float-right">Submit</button>
