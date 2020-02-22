@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Guy6720784",
+    "password": "", 
     "database": "sway_db",
     "host": "localhost",
     "dialect": "mysql"
