@@ -3,8 +3,8 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Users', [
     {
-      email: "firstlast@email.com",
-      password: "password",
+      email: "DemoUser@gmail.com",
+      password: "demo123456",
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 3,
@@ -13,8 +13,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 2,
@@ -23,8 +23,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 5,
@@ -33,8 +33,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 2,
@@ -43,8 +43,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 5,
@@ -53,8 +53,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 4,
@@ -63,8 +63,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 1,
@@ -73,8 +73,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 5,
@@ -83,8 +83,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      email: "firstlast@email.com",
-      password: "password",
+      email: null,
+      password: null,
       start: "72 Street / 2 Avenue",
       end: "Avenue H / East 16 Street",
       busyness: 3,
