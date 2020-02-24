@@ -15,81 +15,11 @@ module.exports = {
     }, {
       email: null,
       password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 2,
-      incident_type: "Police Incident",
-      incident_report: "Suspected Robbery",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 5,
-      incident_type: "Police Incident",
-      incident_report: "Bomb threat",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 2,
-      incident_type: "Environmental Incident",
-      incident_report: "Flooding in station",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 5,
-      incident_type: "Environmental Incident",
-      incident_report: "Temporary Sever Weather Shelter",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 4,
-      incident_type: "Environmental Incident",
-      incident_report: "Rat infestation",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 1,
-      incident_type: "Social Incident",
-      incident_report: "Fight on platform",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 5,
-      incident_type: "Social Incident",
-      incident_report: "Crowd after Rally",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      email: null,
-      password: null,
-      start: "72 Street / 2 Avenue",
-      end: "Avenue H / East 16 Street",
-      busyness: 3,
-      incident_type: "Social Incident",
-      incident_report: "Nets Traffic",
+      start: null,
+      end: null,
+      busyness: null,
+      incident_type: null,
+      incident_report: null,
       createdAt: new Date(),
       updatedAt: new Date()
     }
