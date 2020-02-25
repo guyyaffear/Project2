@@ -7,8 +7,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      stops:`86 Street /
-      2 Avenue`,
+      stops:"86 Street / 2 Avenue",
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -88,7 +87,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      stops: "	Prospect Park / Empire Boulevard-Flatbush Avenue",
+      stops: "Prospect Park / Empire Boulevard-Flatbush Avenue",
       createdAt: new Date(),
       updatedAt: new Date()
     },

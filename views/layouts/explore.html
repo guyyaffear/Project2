@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>SWay Explore Page</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-2" style="text-align: center;"><u> SWay Explore</u></h1>
+            <p class="lead" style="text-align: center;">Welcome to the SWay Explore page</p>
+            <hr class="my-4">
+            <a href="index.html">
+                <button type="button" class="btn btn-primary btn-lg" id="index-btn">Explore</button>
+            </a>
+            <a href="login_page.html">
+                <button type="button" class="btn btn-primary btn-lg" id="login-btn" style="margin-right: 10px;">Login</button>
+            </a>
+            
+          </div>
+
+          <div class="container">
+              <div class="col-12" style="text-align: center;">
+                <h3>Select your Start Station:</h3>
+                <div class="btn-group">
+                  <button class="btn btn-info btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Startbtn">
+                    Large button
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item">A</a>
+                    <a class="dropdown-item">B</a>
+                    <a class="dropdown-item">C</a>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="col-12" style="text-align: center;">
+              <h3>Select your End Station:</h3>
+            <div class="dropdown">
+                <button class="btn btn-info btn-lg dropdown-toggle" type="button" id="Endbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>   
+              </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="col-12">
+              <table class="table table-bordered" id="TrainScdle">
+                <thead>
+                  <tr>
+                    <th scope="col">Train</th>
+                    <th scope="col">Start Destination:</th>
+                    <th scope="col">End Destination:</th>
+                    <th scope="col">Business</th>
+                    <th scope="col">Incident</th>
+                    <th scope="col">Incident Report(Comments)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td id="Start"></td>
+                    <td id="End"></td>
+                    <td id="Busy"></td>
+                    <td id="Inc"></td>
+                    <td id="IncR"></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td id="Start"></td>
+                    <td id="End"></td>
+                    <td id="Busy"></td>
+                    <td id="Inc"></td>
+                    <td id="IncR"></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td id="Start"></td>
+                    <td id="End"></td>
+                    <td id="Busy"></td>
+                    <td id="Inc"></td>
+                    <td id="IncR"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
+    </body>
+<script src="/models/index.js,"></script>
+<script src="/models/QTrain.js"></script>
+<script src="/models/user.js"></script>
+</html>
