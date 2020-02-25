@@ -1,7 +1,7 @@
 var db = require("../models");
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/all", function(req, res) {
+  app.get("/api/stops", function(req, res) {
     db.user.findAll({}).then(function(usersDB) {
       res.json(usersDB);
     });
@@ -20,3 +20,9 @@ module.exports = function(app) {
     });
   });
 };
+
+  // dataArray.forEach(data => {
+  //   const selectDiv = document.getElementById('selectId')
+
+  //   const option = $("option");
+  // })
