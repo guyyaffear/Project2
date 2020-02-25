@@ -5,30 +5,18 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../public/htmls/welcome.html"));
   });
 
-  app.get("/", function(req, res) {
+  app.get("/login_page", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/htmls/login_page.html"));
   });
 
-  app.get("/", function(req, res) {
+  app.get("/index", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/htmls/index.html"));
   });
 
-  app.get("/", function(req, res) {
+  app.get("/explore", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/htmls/explore.html"));
   });
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
 };

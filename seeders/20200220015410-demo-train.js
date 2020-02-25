@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Qtrains', [{
+    return queryInterface.bulkInsert('QTrains', [{
       stops: "96 Street / 2 Avenue",
       createdAt: new Date(),
       updatedAt: new Date()
@@ -175,6 +175,6 @@ module.exports = {
   ]);
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Qtrain', null, {});
+    return queryInterface.bulkDelete('QTrains', null, {});
   }
 };

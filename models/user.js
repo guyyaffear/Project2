@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     incident_report: DataTypes.TEXT
   });
   User.associate = function(models) {
-    User.hasMany(models.QTrain);
+    User.hasMany(models.QTrain, { as: "stops", foreignKey: "stops" });
   };
   return User;
 };
