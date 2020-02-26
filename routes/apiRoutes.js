@@ -14,6 +14,15 @@ module.exports = function(app) {
       res.json(usersDB);
     });
   });
+  app.get("/api/swayselected/startST:", function(req, res) {
+    db.user.findOne({
+     where:{
+       stops:req.params.startST
+     } 
+    }.then(function(usersDB) {
+      res.json(usersDB);
+    })
+  );
 //***** Luicse login ******////
   // app.post("/api/login", function(req, res) {
   //   db.user.create(req.body).then(function(usersDB) {

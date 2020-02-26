@@ -23,14 +23,16 @@ var API = {
     });
   }
 };
-$(document).ready(function(){
+$(document).ready(function() {
   API.getData().then(function(data) {
-    var $data = data.map(function(stop){ 
-    var $option = $("<a class=dropdown-item>").text(stop.stops);
-    return $option;
+    var $data = data.map(function(stop) {
+      var $option = $("<a class=dropdown-item>").text(stop.stops);
+      return $option;
+    });
+    $("#stopbox").append($data);
+    $("#endbox").append($data);
   });
-  $("#stopbox").append($data);
-})
+});
 
 // refreshExamples gets new examples from the db and repopulates the list
 // $("#dropdownMenuButton").on("click", function(event) {
