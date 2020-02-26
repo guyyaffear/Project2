@@ -19,10 +19,35 @@ module.exports = function(app) {
       res.json(usersDB);
     });
   });
+
+
+app.get("/api/posts/:id", function(req, res) {
+  {
+    db.user.findOne({
+      where: {
+        id : req.user.user
+      }
+    })
+  }
+  db.user.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(function(usersDB) {
+      res.json(usersDB);
+    });
+});
+
+app.post("/api/posts", function(req, res) {
+  console.log(req.body);
+  db.user.create({
+    title: req.body.title,
+    body: req.body.body,
+    category: req.body.category
+  })
+    .then(function(usersDB) {
+      res.json(usersDB);
+    });
+});
 };
-
-  // dataArray.forEach(data => {
-  //   const selectDiv = document.getElementById('selectId')
-
-  //   const option = $("option");
-  // })
