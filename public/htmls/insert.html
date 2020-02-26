@@ -1,138 +1,142 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+
     <head>
-        <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-            <title>SWay Home Page</title>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+        <title>SWay Home Page</title>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
-          </head>
     </head>
+</head>
 
-    <body >                    
+<body>
 
-        <div class="container" id="head-container">
-            <div class="jumbotron" id="head" style="text-align: center;">
-                <h1>SWay Station Incident Report</h1>
-                
-            </div>
-           
+    <div class="container" id="head-container">
+        <div class="jumbotron" id="head" style="text-align: center;">
+            <h1>SWay Station Incident Report</h1>
+
         </div>
-    
-       
-        <div class="container">
-            
-            <div class="panel panel-default">
-                <div class="panel-heading panel-custom">
-                    Station Information
-                </div>
-                <table class="table table-hover">
-                    <tr>
-                        <th scope="col">Subway Station</th>
-                        <th scope="col">Subway Line</th>
-                        <th scope="col">Busyness</th>
-                        <th scrope="col">Incident Type</th>
-                        <th scope="col">Detail</th>
-                    </tr>
-                    <tbody id="table-data"></tbody>
-                </table>
-                <hr />
-                
-            </div>
-    
-            
-            <div class="panel panel-default">
-                <div class="panel-heading panel-custom">
-                    Report on Station
-                </div>
-                <br>
-                <div class="panel-body">
-                    <form>
 
-                        <div class="form-group">
-                            <label for="subwayLine">Subway Line:</label>
-                            <select class="form-control" id="subway-line" required>
-                                <option>Q Train</option>
-                                <!-- <option>2</option>
+    </div>
+
+
+    <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-heading panel-custom">
+                Station Information
+            </div>
+            <table class="table table-hover">
+                <tr>
+                    <th scope="col">Subway Station</th>
+                    <th scope="col">Subway Line</th>
+                    <th scope="col">Busyness</th>
+                    <th scrope="col">Incident Type</th>
+                    <th scope="col">Detail</th>
+                </tr>
+                <tbody id="table-data"></tbody>
+            </table>
+            <hr />
+
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading panel-custom">
+                Report on Station
+            </div>
+            <br>
+            <div class="panel-body">
+                <form>
+
+                    <div class="form-group">
+                        <label for="subwayLine">Subway Line:</label>
+                        <select class="form-control" id="subway-line" required>
+                            <option>Q Train</option>
+                            <!-- <option>2</option>
                                 <option>3</option>
                                 <option>4</option> -->
-                              </select>
-                        </div>
+                        </select>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="subwayStation">Subway Station:</label>
-                            <select multiple class="form-control" id="subwayStation">
-                              <option>96 Street / 2 Avenue</option>
-                              <option>86 Street / 2 Avenue</option>
-                              <option>72 Street / 2 Avenue</option>
-                              <option>Lexington Av / 63</option>
-                              <option>57 Street / 7 Avenue</option>
-                              <option>49 Street</option>
-                              <option>Times Square-42 Street / Broadway</option>
-                              <option>34 Street-Herald Square / Broadway</option>
-                              <option>28 Street / Broadway</option>
-                              <option>23 Street / Broadway</option>
-                              <option>14 Street-Union Square / Broadway</option>
-                              <option>8 Street-New York University / Broadway</option>
-                              <option>Prince Street / Broadway</option>
-                              <option>Canal Street / Broadway</option>
-                              <option>DeKalb Avenue / Flatbush Avenue</option>
-                              <option>Atlantic Avenue / Barclays Center</option>
-                              <option>7 Avenue / Flatbush Avenue</option>
-                              <option>Prospect Park / Empire Boulevard-Flatbush Avenue</option>
-                              <option>Parkside Avenue / Ocean Avenue</option>
-                              <option>Church Avenue / East 18 Street</option>
-                              <option>Beverley Road / East 16 Street</option>
-                              <option>Cortelyou Road /East 16 Street</option>
-                              <option>Newkirk Plaza / East 16 Street</option>
-                              <option>Avenue H / East 16 Street</option>
-                              <option>Avenue J / East 16 Street</option>
-                              <option>Avenue M / East 16 Street</option>
-                              <option>Kings Highway / East 16 Street</option>
-                              <option>Avenue U / East 16 Street</option>
-                              <option>Neck Road / East 16 Street</option>
-                              <option>Sheepshead Bay / East 16 Street</option>
-                              <option>Brighton Beach / Brighton 6 Street</option>
-                              <option>Ocean Parkway / Brighton Beach Avenue</option>
-                              <option>West 8 Street-New York Aquarium / Surf Avenue</option>
-                              <option>Coney Island-Stillwell Avenue / Surf Avenue</option>
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label for="subwayStation">Subway Station:</label>
+                        <select multiple class="form-control" id="subwayStation">
+                            <option>96 Street / 2 Avenue</option>
+                            <option>86 Street / 2 Avenue</option>
+                            <option>72 Street / 2 Avenue</option>
+                            <option>Lexington Av / 63</option>
+                            <option>57 Street / 7 Avenue</option>
+                            <option>49 Street</option>
+                            <option>Times Square-42 Street / Broadway</option>
+                            <option>34 Street-Herald Square / Broadway</option>
+                            <option>28 Street / Broadway</option>
+                            <option>23 Street / Broadway</option>
+                            <option>14 Street-Union Square / Broadway</option>
+                            <option>8 Street-New York University / Broadway</option>
+                            <option>Prince Street / Broadway</option>
+                            <option>Canal Street / Broadway</option>
+                            <option>DeKalb Avenue / Flatbush Avenue</option>
+                            <option>Atlantic Avenue / Barclays Center</option>
+                            <option>7 Avenue / Flatbush Avenue</option>
+                            <option>Prospect Park / Empire Boulevard-Flatbush Avenue</option>
+                            <option>Parkside Avenue / Ocean Avenue</option>
+                            <option>Church Avenue / East 18 Street</option>
+                            <option>Beverley Road / East 16 Street</option>
+                            <option>Cortelyou Road /East 16 Street</option>
+                            <option>Newkirk Plaza / East 16 Street</option>
+                            <option>Avenue H / East 16 Street</option>
+                            <option>Avenue J / East 16 Street</option>
+                            <option>Avenue M / East 16 Street</option>
+                            <option>Kings Highway / East 16 Street</option>
+                            <option>Avenue U / East 16 Street</option>
+                            <option>Neck Road / East 16 Street</option>
+                            <option>Sheepshead Bay / East 16 Street</option>
+                            <option>Brighton Beach / Brighton 6 Street</option>
+                            <option>Ocean Parkway / Brighton Beach Avenue</option>
+                            <option>West 8 Street-New York Aquarium / Surf Avenue</option>
+                            <option>Coney Island-Stillwell Avenue / Surf Avenue</option>
+                        </select>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="busyness">Busyness:</label>
-                            <label class="radio-inline" id="busyness1"><input type="radio" name="optradio" checked>1</label>
-                            <label class="radio-inline" id="busyness2"><input type="radio" name="optradio">2</label>
-                            <label class="radio-inline" id="busyness3"><input type="radio" name="optradio">3</label>
-                            <label class="radio-inline" id="busyness4"><input type="radio" name="optradio">4</label>
-                            <label class="radio-inline" id="busyness5"><input type="radio" name="optradio">5</label>
-                        </div>
-                        <div class="form-group">
-                            <label for="incidentType">Incident Type:</label>
-                            <select class="form-control" id="incident-type">
-                                <option>Police</option>
-                                <option>Hazard/Environmental</option>
-                                <option>Closure</option>
-                                <option>Social</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="detail">Detail:</label>
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" id="btn-add" class="btn btn-primary"><span
-                                    class="glyphicon glyphicon-search"></span> Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- end Add Train Panel -->
+                    <div class="form-group">
+                        <label for="busyness">Busyness:</label>
+                        <label class="radio-inline" id="busyness1"><input type="radio" name="optradio" checked>1</label>
+                        <label class="radio-inline" id="busyness2"><input type="radio" name="optradio">2</label>
+                        <label class="radio-inline" id="busyness3"><input type="radio" name="optradio">3</label>
+                        <label class="radio-inline" id="busyness4"><input type="radio" name="optradio">4</label>
+                        <label class="radio-inline" id="busyness5"><input type="radio" name="optradio">5</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="incidentType">Incident Type:</label>
+                        <select class="form-control" id="incident-type">
+                            <option>Police</option>
+                            <option>Hazard/Environmental</option>
+                            <option>Closure</option>
+                            <option>Social</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="detail">Detail:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" id="btn-add" class="btn btn-primary"><span
+                                class="glyphicon glyphicon-search"></span> Submit</button>
+                    </div>
+                </form>
             </div>
-    
+            <!-- end Add Train Panel -->
         </div>
 
-    </body>
+    </div>
+
+</body>
 
 
 </html>
