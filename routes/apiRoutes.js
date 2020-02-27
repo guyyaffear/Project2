@@ -15,20 +15,22 @@ module.exports = function(app) {
     });
   });
   app.get("/api/swayselected/startST:", function(req, res) {
-    db.user.findOne({
-     where:{
-       stops:req.params.startST
-     } 
-    }.then(function(usersDB) {
-      res.json(usersDB);
-    })
-  );
-//***** Luicse login ******////
+    db.user.findOne(
+      {
+        where: {
+          stops: req.params.startST
+        }
+      }.then(function(usersDB) {
+        res.json(usersDB);
+      })
+    );
+  });
+  //***** Luicse login ******////
   // app.post("/api/login", function(req, res) {
   //   db.user.create(req.body).then(function(usersDB) {
   //     res.json(usersDB);
   //   });
-  // }); 
+  // });
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
@@ -37,34 +39,35 @@ module.exports = function(app) {
     });
   });
 
-
-app.get("/api/posts/:id", function(req, res) {
-  {
-    db.user.findOne({
-      where: {
-        id : req.user.user
-      }
-    })
-  }
-  db.user.findOne({
-    where: {
-      id: req.params.id
+  app.get("/api/posts/:id", function(req, res) {
+    {
+      db.user.findOne({
+        where: {
+          id: req.user.user
+        }
+      });
     }
-  })
-    .then(function(usersDB) {
-      res.json(usersDB);
-    });
-});
+    db.user
+      .findOne({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(function(usersDB) {
+        res.json(usersDB);
+      });
+  });
 
-app.post("/api/posts", function(req, res) {
-  console.log(req.body);
-  db.user.create({
-    title: req.body.title,
-    body: req.body.body,
-    category: req.body.category
-  })
-    .then(function(usersDB) {
-      res.json(usersDB);
-    });
-});
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.user
+      .create({
+        title: req.body.title,
+        body: req.body.body,
+        category: req.body.category
+      })
+      .then(function(usersDB) {
+        res.json(usersDB);
+      });
+  });
 };
