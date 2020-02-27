@@ -10,12 +10,18 @@ var API = {
       data: JSON.stringify(newUser)
     });
   },
+  getinfoSway: function() {
+    return $.ajax({
+      url: "/api/swayselected",
+      type: "GET"
+    });
+  },
   getData: function() {
     return $.ajax({
       url: "/api/stops",
       type: "GET"
     });
-  },
+  }, 
   deleteExample: function(id) {
     return $.ajax({
       url: "api/examples/" + id,
@@ -25,7 +31,8 @@ var API = {
 };
 $(document).ready(function() {
   API.getData().then(function(data) {
-    var $data = data.map(function(stop) {
+    var $data = data.
+    (function(stop) {
       var $option = $("<a class=dropdown-item>").text(stop.stops);
       return $option;
     });
@@ -33,6 +40,8 @@ $(document).ready(function() {
     $("#endbox").append($data);
   });
 });
+var startSway = $("#stopbox");
+
 
 // refreshExamples gets new examples from the db and repopulates the list
 // $("#dropdownMenuButton").on("click", function(event) {
