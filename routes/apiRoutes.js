@@ -70,4 +70,19 @@ module.exports = function(app) {
         res.json(usersDB);
       });
   });
+  app.put("/api/SwaysUpdate", function(req, res) {
+    db.user
+      .update(req.body, {
+        where: {
+          id: req.body.id,
+          start: req.body.start,
+          end: req.body.end,
+          incident_type:req.body.incident_type,
+          incident_report:req.body.incident_report
+        }
+      })
+      .then(function(usersDB) {
+        res.json(usersDB);
+      });
+  });
 };

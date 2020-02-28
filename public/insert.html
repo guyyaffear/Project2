@@ -7,9 +7,13 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
         <title>SWay Home Page</title>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title"> -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     </head>
 </head>
@@ -65,8 +69,47 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="subwayStation">Subway Station:</label>
-                        <select multiple class="form-control" id="subwayStation">
+                        <label for="subwayStation1">Subway Station:</label>
+                        <select multiple class="form-control" id="subwayStationStart">
+                            <option>96 Street / 2 Avenue</option>
+                            <option>86 Street / 2 Avenue</option>
+                            <option>72 Street / 2 Avenue</option>
+                            <option>Lexington Av / 63</option>
+                            <option>57 Street / 7 Avenue</option>
+                            <option>49 Street</option>
+                            <option>Times Square-42 Street / Broadway</option>
+                            <option>34 Street-Herald Square / Broadway</option>
+                            <option>28 Street / Broadway</option>
+                            <option>23 Street / Broadway</option>
+                            <option>14 Street-Union Square / Broadway</option>
+                            <option>8 Street-New York University / Broadway</option>
+                            <option>Prince Street / Broadway</option>
+                            <option>Canal Street / Broadway</option>
+                            <option>DeKalb Avenue / Flatbush Avenue</option>
+                            <option>Atlantic Avenue / Barclays Center</option>
+                            <option>7 Avenue / Flatbush Avenue</option>
+                            <option>Prospect Park / Empire Boulevard-Flatbush Avenue</option>
+                            <option>Parkside Avenue / Ocean Avenue</option>
+                            <option>Church Avenue / East 18 Street</option>
+                            <option>Beverley Road / East 16 Street</option>
+                            <option>Cortelyou Road /East 16 Street</option>
+                            <option>Newkirk Plaza / East 16 Street</option>
+                            <option>Avenue H / East 16 Street</option>
+                            <option>Avenue J / East 16 Street</option>
+                            <option>Avenue M / East 16 Street</option>
+                            <option>Kings Highway / East 16 Street</option>
+                            <option>Avenue U / East 16 Street</option>
+                            <option>Neck Road / East 16 Street</option>
+                            <option>Sheepshead Bay / East 16 Street</option>
+                            <option>Brighton Beach / Brighton 6 Street</option>
+                            <option>Ocean Parkway / Brighton Beach Avenue</option>
+                            <option>West 8 Street-New York Aquarium / Surf Avenue</option>
+                            <option>Coney Island-Stillwell Avenue / Surf Avenue</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subwayStation2">Subway Station:</label>
+                        <select multiple class="form-control" id="subwayStationEnd">
                             <option>96 Street / 2 Avenue</option>
                             <option>86 Street / 2 Avenue</option>
                             <option>72 Street / 2 Avenue</option>
@@ -125,10 +168,10 @@
                         <label for="detail">Detail:</label>
                         <textarea class="form-control" rows="5" id="comment"></textarea>
                     </div>
-                    <div class="btn-group" role="group">
-                        <button type="button" id="btn-add" class="btn btn-primary"><span
+                    <!-- <div class="btn-group" role="group"> -->
+                        <button type="button" id="submit" class="btn btn-primary"><span
                                 class="glyphicon glyphicon-search"></span> Submit</button>
-                    </div>
+                    <!-- </div> -->
                 </form>
             </div>
             <!-- end Add Train Panel -->
@@ -137,6 +180,7 @@
     </div>
 
 </body>
-
-
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+<script src="/js/insert.js"></script>
 </html>
