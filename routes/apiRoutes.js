@@ -15,18 +15,24 @@ module.exports = function(app){
       res.json(usersDB);
     });
   });
-  // app.get("/api/swayselected/startST:", function(req, res) {
-  //   db.Users.findOne(
-  //     {
-  //       where: {
-  //         stops: req.params.startST
-  //       }
-  //     }.then(function(usersDB) {
-  //       res.json(usersDB);
-  //     })
-  //   );
-  // });
-
+  app.get("/api/getReport", function(req, res) {
+    db.User.findAll({}).then(function(usersDB) {
+        res.json(usersDB);
+      })
+  });
+  app.get("/api/getExplore", function(req, res) {
+    db.User.findall({
+      where : {start: req.body.start,
+              
+        end:req.body.end}
+    }).then(function(usersDB) {
+        res.json(usersDB);
+      })
+  });
+  // {
+    // where: {
+    //   stops: req.params.startST
+    // }
   //***** Luicse login ******////
   // app.post("/api/login", function(req, res) {
   //   db.user.create(req.body).then(function(usersDB) {
@@ -59,20 +65,19 @@ module.exports = function(app){
   //       res.json(usersDB);
   //     });
   // },
-    app.put("/api/SwaysUpdates", function(req, res) {
+    app.post("/api/SwaysUpdates", function(req, res) {
       // console.log(req.body.end);
       // console.log(req.body);
-    db.User.update(req.body, {
-        where: {
-          id: req.body.id,
-          // start: req.body.start[0],
-          end: req.body.end,
-          incident_type:req.body.incident_type,
-          incident_report:req.body.incident_report
-        }
-      })
-      .then(function(usersDB) {
-        res.json(usersDB);
-      });
- });
+    db.User.create(req.body).then(function (dbPost) {
+      res.json(dbPost);
+    });
+});
 };
+
+// where: {
+//   start: req.body.start[0],
+//   end: req.body.end,
+//   incident_type:req.body.incident_type,
+//   incident_report:req.body.incident_report
+// }
+// })
