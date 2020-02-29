@@ -1,5 +1,6 @@
 var db = require("../models");
-module.exports = function(app) {
+module.exports = function(app){
+
   // Get all examples
   app.get("/api/stops", function(req, res) {
     db.QTrain.findAll({}).then(function(stops) {
@@ -14,17 +15,18 @@ module.exports = function(app) {
       res.json(usersDB);
     });
   });
-  app.get("/api/swayselected/startST:", function(req, res) {
-    db.user.findOne(
-      {
-        where: {
-          stops: req.params.startST
-        }
-      }.then(function(usersDB) {
-        res.json(usersDB);
-      })
-    );
-  });
+  // app.get("/api/swayselected/startST:", function(req, res) {
+  //   db.Users.findOne(
+  //     {
+  //       where: {
+  //         stops: req.params.startST
+  //       }
+  //     }.then(function(usersDB) {
+  //       res.json(usersDB);
+  //     })
+  //   );
+  // });
+
   //***** Luicse login ******////
   // app.post("/api/login", function(req, res) {
   //   db.user.create(req.body).then(function(usersDB) {
@@ -33,49 +35,37 @@ module.exports = function(app) {
   // });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.user.destroy({ where: { id: req.params.id } }).then(function(usersDB) {
-      res.json(usersDB);
-    });
-  });
+  // app.delete("/api/examples/:id", function(req, res) {
+  //   db.user.destroy({ where: { id: req.params.id } }).then(function(usersDB) {
+  //     res.json(usersDB);
+  //   });
+  // });
 
-  app.get("/api/posts/:id", function(req, res) {
-    {
-      db.user.findOne({
-        where: {
-          id: req.user.user
-        }
-      });
-    }
-    db.user
-      .findOne({
-        where: {
-          id: req.params.id
-        }
-      })
-      .then(function(usersDB) {
-        res.json(usersDB);
-      });
-  });
-
-  app.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    db.user
-      .create({
-        title: req.body.title,
-        body: req.body.body,
-        category: req.body.category
-      })
-      .then(function(usersDB) {
-        res.json(usersDB);
-      });
-  });
-  app.put("/api/SwaysUpdate", function(req, res) {
-    db.user
-      .update(req.body, {
+  // app.get("/api/posts/:id", function(req, res) {
+  //   {
+  //     db.user.findOne({
+  //       where: {
+  //         id: req.user.user
+  //       }
+  //     });
+  //   }
+  //   db.user
+  //     .findOne({
+  //       where: {
+  //         id: req.params.id
+  //       }
+  //     })
+  //     .then(function(usersDB) {
+  //       res.json(usersDB);
+  //     });
+  // },
+    app.put("/api/SwaysUpdates", function(req, res) {
+      // console.log(req.body.end);
+      // console.log(req.body);
+    db.User.update(req.body, {
         where: {
           id: req.body.id,
-          start: req.body.start,
+          // start: req.body.start[0],
           end: req.body.end,
           incident_type:req.body.incident_type,
           incident_report:req.body.incident_report
@@ -84,5 +74,5 @@ module.exports = function(app) {
       .then(function(usersDB) {
         res.json(usersDB);
       });
-  });
+ });
 };

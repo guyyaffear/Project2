@@ -31,16 +31,15 @@ var API = {
 };
 $(document).ready(function() {
   API.getData().then(function(data) {
-    var $data = data.
-    (function(stop) {
+    var $data = data.map(function(stop){
       var $option = $("<a class=dropdown-item>").text(stop.stops);
       return $option;
     });
     $("#stopbox").append($data);
     $("#endbox").append($data);
+    });
   });
-});
-var startSway = $("#stopbox");
+// var startSway = $("#stopbox");
 
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -51,4 +50,3 @@ var startSway = $("#stopbox");
 //     $("#stopbox").append($data);
 //     //append option array to select div
 //   });
-// });
