@@ -31,14 +31,8 @@ var API = {
 };
 $(document).ready(function () {
   API.getData().then(function (data) {
-    // function setvalue(elementId, value) {
-    //   console.log("test");
-    //   console.log("#"+elementId);
-    //   $(elementId).html(value);
-    //   }
     var $data = data.map(function (stop) {
       var $option = $("<a class=dropdown-item>").text(stop.stops);
-      // $option.onclick = () => $("#dropdownMenuButton").text(stop.stops);
       return $option;
     });
     $("#stopbox").append($data);
@@ -60,44 +54,9 @@ $(document).ready(function () {
       // event.preventDefault();
       console.log('event', event.target.innerText);
       $("#Endbtn").html(event.target.innerText);
-      // $("#dropdownMenuButton").html(event.target.innerText);
     });
-    // $(".dropdown-item").on("click", function (event) {
-    //   // event.preventDefault();
-    //   console.log('event', event.target.innerText);
-    //   $("#Endbtn").html(event.target.innerText);
-    //   $("#dropdownMenuButton").html(event.target.innerText);
-    // });
   });
 
-  // function getExplore() {
-  //   $.ajax({
-  //   method: "GET",
-  //   url: "/api/gerExplore",
-  //   })
-  //   .then(function(res) {
-  //       console.log(res);
-  //       console.log("i am herer");
-  //       // window.location.href = "/insert.html";
-  //       for(var i=0;i<res.length;i++)
-  //       {
-  //           var newRow = $("<tr>").append(
-  //               $("<td>").text(res[i].start),
-  //               $("<td>").text(res[i].end),
-  //             );
-  //             $("#reportT > tbody").append(newRow);
-  //       }
-  //   });
-  // };
-  // var startSway = $("#stopbox");
-
-
-  // refreshExamples gets new examples from the db and repopulates the list
-  // $("#dropdownMenuButton").on("click", function(event) {
-  //   console.log("I AM IN THE BUTTON");
-  //   event.preventDefault();
-  //     // $exampleList.empty(); //select div and empty it
-  //     $("#stopbox").append($data);
-  //     //append option array to select div
+ 
 });
 
